@@ -4,8 +4,8 @@
 
 ```
 # pip3 install vk_api
-# git clone 
-# cd 
+# git clone https://github.com/TheMaxMur/vk-bot-for-homework
+# cd vk-bot-for-homework
 ```
 После установки нужно будет добавить администратора в файл admins.txt
 
