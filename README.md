@@ -30,3 +30,11 @@
 ```
 # python3 index.py
 ```
+
+Или просто 
+
+``` 
+python index.py
+```
+
+если вы работаете на ОС Windows.
