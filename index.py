@@ -1,5 +1,4 @@
 import vk_api
-import os
 from datetime import datetime
 from vk_api.utils import get_random_id
 from vk_api.bot_longpoll import VkBotLongPoll, VkBotEventType
@@ -102,7 +101,7 @@ for event in longpoll.listen():
                 string = ""
 
             if event.obj.text == "/help":
-                vk.messages.send(chat_id = event.chat_id, random_id=get_random_id(), message="Вот список команд:\n/add 'дата;предмет;дз' - добавить домашку\n/del 'предмет' - удаляет все домашки по данному предмету \n/del 'дата;предмет' - удаляет домашку по предмету и по дате \n/list - список домашки \n/doc - таблица с домашкой")
+                vk.messages.send(chat_id = event.chat_id, random_id=get_random_id(), message="Вот список команд:\n/add 'дата;предмет;дз' - добавить домашку\n/del 'предмет' - удаляет все домашки по данному предмету \n/del 'дата;предмет' - удаляет домашку по предмету и по дате \n/list - список домашки")
             
             #if event.obj.text == "/doc":
             #    vk.messages.send(chat_id = event.chat_id, random_id = get_random_id(), message = "Ссылка на таблицу с домашкой:\n")
