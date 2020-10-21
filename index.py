@@ -10,8 +10,8 @@ longpoll = VkBotLongPoll(vk_session, "id группы, к которой при�
 string = ""
 result = ""
 date_count = 0  
-path_homework_base = "путь до файла, в котором будет храниться домашка/homework.txt"
-path_admin_base = "путь до файла, в котором будут хранится админы/admins.txt"
+path_homework_base = "путь до файла, в котором будет храниться домашка/homework.txt" #Пример для Windows: C:\\users\\Desktop\\vk-bot-for-homework\\homework.txt ; Linux: /home/user/Documents/vk-bot-for-homework/homework.txt
+path_admin_base = "путь до файла, в котором будут хранится админы/admins.txt" #Пример для Windows: C:\\users\\Desktop\\vk-bot-for-homework\\admins.txt ; Linux: /home/user/Documents/vk-bot-for-homework/homework.txt
 
 for event in longpoll.listen(): 
     file = open(path_homework_base, "r")
