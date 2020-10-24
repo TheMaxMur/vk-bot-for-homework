@@ -8,8 +8,7 @@ vk_session = vk_api.VkApi(token="Ваш токен")
 vk = vk_session.get_api()
 longpoll = VkBotLongPoll(vk_session, "id группы, в которой создан бот")
 string = ""
-result = ""
-date_count = 0  
+result = ""  
 path_homework_base = "/path/to/file/homework.txt" #Пример для Windows: C:\\users\\Desktop\\vk-bot-for-homework\\homework.txt ; Linux: /home/user/Documents/vk-bot-for-homework/homework.txt
 path_admin_base = "/path/to/file/admins.txt" #Пример для Windows: C:\\users\\Desktop\\vk-bot-for-homework\\admins.txt ; Linux: /home/user/Documents/vk-bot-for-homework/homework.txt
 
@@ -35,9 +34,6 @@ def add_homework(comand, result, comannd_user, output):
         output = open(path_homework_base, "a")
 
         unix_date = datetime(1970, 1, 1)
-        date_now = datetime.today()
-        date_now = datetime(date_now.year, date_now.month, date_now.day)
-        date_now = (date_now - unix_date).total_seconds()
         
         matrix = []
         time_in_seconds = []
