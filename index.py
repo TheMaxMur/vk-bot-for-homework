@@ -14,8 +14,15 @@ path_homework_base = "/path/to/file/homework.txt" #Пример для Windows: 
 path_admin_base = "/path/to/file/admins.txt" #Пример для Windows: C:\\users\\Desktop\\vk-bot-for-homework\\admins.txt ; Linux: /home/user/Documents/vk-bot-for-homework/homework.txt
 
 def add_homework(comand, result, comannd_user, output):
-    check_zero_data = comand[1].split(".")
-    if (len(check_zero_data) == 3) and (check_zero_data[0] != "00") and (check_zero_data[1] != "00") and (check_zero_data[2] != "00") and (len(check_zero_data[0]) == 2) and (len(check_zero_data[1]) == 2) and (len(check_zero_data[2]) == 2):
+    arr_date = comand[1].split(".")
+    len_all_date = 3
+    len_date = 2
+    zero_date = "00"
+    check_zero = (arr_date[0] != zero_date) and (arr_date[1] != zero_date) and (arr_date[2] != zero_date)
+    check_len_date = (len(arr_date) == len_all_date) and (len(arr_date[0]) == len_date) and (len(arr_date[1]) == len_date) and (len(arr_date[2]) == len_date)
+    check_date_result = check_zero and check_len_date
+    
+    if check_date_result == True:
         for index in range(len(comannd_user)):
             result += comannd_user[index] + "; "
         result = result[:-2]
