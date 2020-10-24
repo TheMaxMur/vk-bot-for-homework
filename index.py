@@ -34,7 +34,7 @@ def add_homework(comand, result, comannd_user, output):
         
         matrix = []
         time_in_seconds = []
-        with open(path_homework_base, encoding="utf-8") as inf:
+        with open(path_homework_base, encoding="utf-8",  errors='ignore') as inf:
             for index in inf:
                 matrix.append(index.split(";"))
 
@@ -92,7 +92,7 @@ def delete_homework(comannd_user):
     output.close() 
     for index in range(len(comannd_user)):
         result += comannd_user[index].strip() + "; "
-    with open(path_homework_base,"r+", encoding="utf-8") as file2:
+    with open(path_homework_base,"r+", encoding="utf-8",  errors='ignore') as file2:
         new_f = file2.readlines()
         file2.seek(0)
         for line in new_f:
@@ -123,7 +123,7 @@ def delete_admin(comannd_user):
     file.close()
     output.close()
     result = comannd_user
-    with open(path_admin_base,"r+", encoding="utf-8") as file2:
+    with open(path_admin_base,"r+", encoding="utf-8",  errors='ignore') as file2:
         new_f = file2.readlines()
         file2.seek(0)
         for line in new_f:
@@ -136,7 +136,7 @@ def delete_admin(comannd_user):
 
 def admin_list():
     global string
-    with open(path_admin_base, encoding="utf-8") as inf:
+    with open(path_admin_base, encoding="utf-8",  errors='ignore') as inf:
         for index in inf:
             string += "https://vk.com/id" + index.strip() + "\n"
     if string != "":
